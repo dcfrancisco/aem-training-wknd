@@ -62,7 +62,6 @@ public class GetPageIT {
 
     /**
      * Verifies that the homepage exists on author
-     * @throws ClientException if cannot connect
      */
     @Test
     public void testHomePageAuthor() throws ClientException {
@@ -71,7 +70,6 @@ public class GetPageIT {
 
     /**
      * Verifies that the sites console exists on author
-     * @throws ClientException if cannot connect
      */
     @Test
     public void testSitesAuthor() throws ClientException {
@@ -80,7 +78,6 @@ public class GetPageIT {
 
     /**
      * Verifies that the assets console exists on author
-     * @throws ClientException if cannot connect
      */
     @Test
     public void testAssetsAuthor() throws ClientException {
@@ -89,7 +86,6 @@ public class GetPageIT {
 
     /**
      * Verifies that the projects console exists on author
-     * @throws ClientException if cannot connect
      */
     @Test
     public void testProjectsAuthor() throws ClientException {

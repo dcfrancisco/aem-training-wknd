@@ -44,6 +44,25 @@ module.exports = {
   libs: [
     {
       ...libsBaseConfig,
+      name: 'clientlib-dependencies',
+      categories: ['wknd.dependencies'],
+      assets: {
+        // Copy entrypoint scripts and stylesheets into the respective ClientLib
+        // directories
+        js: {
+          cwd: 'clientlib-dependencies',
+          files: ['**/*.js'],
+          flatten: false
+        },
+        css: {
+          cwd: 'clientlib-dependencies',
+          files: ['**/*.css'],
+          flatten: false
+        }
+      }
+    },
+    {
+      ...libsBaseConfig,
       name: 'clientlib-site',
       categories: ['wknd.site'],
       dependencies: ['wknd.dependencies'],

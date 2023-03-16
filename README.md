@@ -1,41 +1,17 @@
-# AEM WKND Sites Project
+# Chapter 2 - Component Basics Start
 
-![Maven CI](https://github.com/adobe/aem-guides-wknd/actions/workflows/maven.yml/badge.svg)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.adobe.aem.guides/aem-guides-wknd/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.adobe.aem.guides/aem-guides-wknd)
-
-This is a sample Adobe Experience Manager project for a full stack Sites implementation for a fictitious lifestyle brand, WKND.
-
-![App screenshot](https://user-images.githubusercontent.com/8974514/119887685-489f7800-bee9-11eb-9db1-95c641e7c4ea.jpg)
-
-## Live Demo
-
-View the live demo at [https://www.wknd.site/](https://www.wknd.site/)
+This is the starter code branch for [Chapter 2 - Component Basics](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html)
 
 ## Tutorial
 
 A corresponding [tutorial is available](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) where you can learn how to implement a website using the latest standards and technologies in AEM Sites.
 
-## How to use/install
-
-### AEM as a Cloud Service
-
-To deploy WKND to AEM as a Cloud Service, this project's source code must be deployed to AEM via Cloud Manager. 
-
-1. Clone this Git repository
-2. Push the `main` branch to your Cloud Manager's Git repository
-3. Ensure a deployment pipline is configured to deploy the target branch/repo to the desired AEM as a Cloud Service env
-4. Run the Cloud Manager pipeline
-5. WKND will now be deployed to the target AEM as a Cloud Service environment
-
-### Local development (AEM 6.5 or AEM SDK)
+## How to use
 
 Pre-compiled AEM packages are available under the latest release for easy installation on local environments using [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 
 * [`aem-guides-wknd.all-x.x.x.zip`](https://github.com/adobe/aem-guides-wknd/releases/latest): AEM as a Cloud Service, default build
 * [`aem-guides-wknd.all-x.x.x-classic.zip`](https://github.com/adobe/aem-guides-wknd/releases/latest): AEM 6.5.x+
-
-
-
 
 ## How to build
 
@@ -55,11 +31,9 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 ## System Requirements
 
-WKND Version | AEM as a Cloud Service | AEM 6.5   | Java SE | Maven
--------------|------------------------|-----------|---------|---------
-Latest (main branch)| Continual              | **6.5.13.0+** |  8, 11  | 3.3.9+
-[v1.1.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.1.0) | Continual | 6.5.10+ | 8, 11 | 3.3.9+
-[v1.0.0](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-1.0.0) | Continual | 6.5.4+ | 8, 11 | 3.3.9+
+ AEM as a Cloud Service | AEM 6.5   | Java SE | Maven
+------------------------|-----------|----------|---------
+Continual               | 6.5.10.0+ |  8, 11   | 3.3.9+
 
 Setup your local development environment for [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) or for [older versions of AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 

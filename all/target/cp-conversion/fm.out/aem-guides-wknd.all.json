@@ -1,0 +1,218 @@
+{
+  "id":"com.adobe.aem.guides:aem-guides-wknd.all:slingosgifeature:0.0.1-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.adobe.aem.guides:aem-guides-wknd.core:0.0.1-SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT"
+    },
+    {
+      "id":"com.adobe.cq:core.wcm.components.core:2.18.0",
+      "start-order":"20",
+      "content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "org.apache.sling.commons.log.LogManager.factory.config~wknd":    {
+      "org.apache.sling.commons.log.names":[
+        "com.adobe.aem.guides.wknd"
+      ],
+      "org.apache.sling.commons.log.level":"INFO",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|com.adobe.aem.guides:aem-guides-wknd.ui.config:0.0.1-SNAPSHOT"
+    },
+    "com.adobe.cq.wcm.core.components.internal.services.embed.OEmbedClientImplConfigurationFactory~facebookVideo":    {
+      "unsafeContext":"true",
+      "scheme":[
+        "https?://www\\.facebook\\.com/.*/videos/.*",
+        "https?://www\\.facebook\\.com/video\\.php.*"
+      ],
+      "format":"json",
+      "endpoint":"https://www.facebook.com/plugins/video/oembed.json",
+      "provider":"Facebook Video",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.adobe.cq.wcm.core.components.internal.services.embed.OEmbedClientImplConfigurationFactory~instagram":    {
+      "unsafeContext":"true",
+      "scheme":[
+        "https?://(www\\.)?instagram\\.com/p/.*",
+        "https?://(www\\.)?instagr\\.am/p/.*"
+      ],
+      "format":"json",
+      "endpoint":"https://api.instagram.com/oembed",
+      "provider":"Instagram",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.adobe.cq.wcm.core.components.internal.services.embed.OEmbedClientImplConfigurationFactory~twitter":    {
+      "unsafeContext":"true",
+      "scheme":[
+        "https?://(.*.)?twitter.com/.*"
+      ],
+      "format":"json",
+      "endpoint":"https://publish.twitter.com/oembed",
+      "provider":"Twitter",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.adobe.cq.wcm.core.components.internal.services.embed.OEmbedClientImplConfigurationFactory~facebookPost":    {
+      "unsafeContext":"true",
+      "scheme":[
+        "https?://www\\.facebook\\.com/.*/posts/.*",
+        "https?://www\\.facebook\\.com/photos/.*",
+        "https?://www\\.facebook\\.com/.*/photos/.*",
+        "https?://www\\.facebook\\.com/photo\\.php.*",
+        "https?://www\\.facebook\\.com/photo\\.php"
+      ],
+      "format":"json",
+      "endpoint":"https://www.facebook.com/plugins/post/oembed.json",
+      "provider":"Facebook Post",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~componentsservice":    {
+      "user.mapping":[
+        "com.adobe.cq.core.wcm.components.core:components-service=[clientlibs-service,sling-scripting]"
+      ],
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.adobe.cq.wcm.core.components.internal.services.embed.OEmbedClientImplConfigurationFactory~youtube":    {
+      "unsafeContext":"true",
+      "scheme":[
+        "https://.*.youtube.com/watch.*",
+        "https://.*.youtube.com/v/.*",
+        "https://youtu.be/.*"
+      ],
+      "format":"json",
+      "endpoint":"https://www.youtube.com/oembed",
+      "provider":"YouTube",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.adobe.cq.dam.cfm.impl.component.ComponentConfigImpl~core-comp-v1":    {
+      "dam.cfm.component.elementsProp":"elementName",
+      "dam.cfm.component.variationProp":"variationName",
+      "dam.cfm.component.fileReferenceProp":"fragmentPath",
+      "dam.cfm.component.resourceType":"core/wcm/components/contentfragment/v1/contentfragment",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.adobe.cq.wcm.core.components.internal.services.embed.OEmbedClientImplConfigurationFactory~flickr":    {
+      "unsafeContext":"true",
+      "scheme":[
+        "https?://.*.flickr\\.com/photos/.*",
+        "https?://flic\\.kr/p/.*"
+      ],
+      "format":"xml",
+      "endpoint":"https://www.flickr.com/services/oembed/",
+      "provider":"Flickr",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.day.cq.wcm.foundation.forms.impl.MailServlet~core-components":    {
+      "service.description":"Core Form Mail Servlet",
+      "sling.servlet.resourceTypes":[
+        "core/wcm/components/form/container/v1/container",
+        "core/wcm/components/form/container/v2/container"
+      ],
+      "resource.blacklist":[
+        "/content/usergenerated"
+      ],
+      "resource.whitelist":[
+        "/content",
+        "/home"
+      ],
+      "sling.servlet.selectors":"mail",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.adobe.cq.ui.wcm.commons.internal.servlets.rte.RTEFilterServletFactory.amended~core-components":    {
+      "resource.types":[
+        "core/wcm/components/text/v1/text",
+        "core/wcm/components/text/v2/text"
+      ],
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.adobe.cq.wcm.core.components.internal.services.embed.OEmbedClientImplConfigurationFactory~soundcloud":    {
+      "unsafeContext":"true",
+      "scheme":[
+        "https?://soundcloud\\.com/.*"
+      ],
+      "format":"json",
+      "endpoint":"https://soundcloud.com/oembed",
+      "provider":"SoundCloud",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.adobe.cq.wcm.core.components.internal.servlets.AdaptiveImageServletMappingConfigurationFactory~img":    {
+      "selectors":[
+        "img"
+      ],
+      "extensions":[
+        "jpg",
+        "jpeg",
+        "png",
+        "gif",
+        "svg"
+      ],
+      "resource.types":[
+        "core/wcm/components/image"
+      ],
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    },
+    "com.adobe.cq.wcm.core.components.internal.servlets.AdaptiveImageServletMappingConfigurationFactory~coreimg":    {
+      "selectors":[
+        "coreimg"
+      ],
+      "extensions":[
+        "jpg",
+        "jpeg",
+        "png",
+        "gif",
+        "svg"
+      ],
+      "resource.types":[
+        "core/wcm/components/image",
+        "cq/Page"
+      ],
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:0.0.1-SNAPSHOT|adobe/cq60:core.wcm.components.config:2.18.0"
+    }
+  },
+  "content-packages:ARTIFACTS|true":[
+    "com.adobe.aem.guides:aem-guides-wknd.ui.content:zip:cp2fm-converted:0.0.1-SNAPSHOT",
+    "com.adobe.aem.guides:aem-guides-wknd.ui.config:zip:cp2fm-converted:0.0.1-SNAPSHOT",
+    "com.adobe.aem.guides:aem-guides-wknd.ui.apps:zip:cp2fm-converted:0.0.1-SNAPSHOT",
+    "adobe.cq60:core.wcm.components.config:zip:cp2fm-converted:2.18.0",
+    "adobe.cq60:core.wcm.components.content:zip:cp2fm-converted:2.18.0",
+    "com.adobe.aem.guides:aem-guides-wknd.all:zip:cp2fm-converted:0.0.1-SNAPSHOT"
+  ],
+  "repoinit:TEXT|true":[
+    "create path (sling:OrderedFolder) /content/dam/wknd\r",
+    "create path (nt:unstructured) /content/dam/wknd/jcr:content\r",
+    "set properties on /content/dam/wknd/jcr:content",
+    "  set cq:conf{String} to /conf/wknd",
+    "  set jcr:title{String} to \"WKND Sites Project\"",
+    "end"
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.adobe.aem.guides.wknd.core.filters",
+        "com.adobe.aem.guides.wknd.core.listeners",
+        "com.adobe.aem.guides.wknd.core.models",
+        "com.adobe.aem.guides.wknd.core.schedulers",
+        "com.adobe.aem.guides.wknd.core.servlets",
+        "com.adobe.cq.wcm.core.components.util",
+        "com.adobe.cq.wcm.core.components.models",
+        "com.adobe.cq.wcm.core.components.models.datalayer",
+        "com.adobe.cq.wcm.core.components.models.datalayer.jackson",
+        "com.adobe.cq.wcm.core.components.models.datalayer.builder",
+        "com.adobe.cq.wcm.core.components.models.form",
+        "com.adobe.cq.wcm.core.components.models.embeddable",
+        "com.adobe.cq.wcm.core.components.models.contentfragment",
+        "com.adobe.cq.wcm.core.components.services.embed",
+        "com.adobe.cq.wcm.core.components.services.link",
+        "com.adobe.cq.wcm.core.components.services.form",
+        "com.adobe.cq.wcm.core.components.config",
+        "com.adobe.cq.wcm.core.components.commons.link",
+        "com.adobe.cq.wcm.core.components.commons.editor.dialog.childreneditor",
+        "com.adobe.cq.wcm.core.components.commons.editor.dialog",
+        "com.adobe.cq.wcm.core.components.commons.editor.dialog.inherited"
+      ]
+    }
+  ]
+}
